@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController" customModule="HowTo" customModuleProvider="target">
+            <connections>
+                <outlet property="instructionLabel" destination="gow-qW-S26" id="Hos-PN-5H0"/>
+                <outlet property="nextButton" destination="t3j-qi-sL1" id="XwA-IC-QBv"/>
+                <outlet property="playButton" destination="0fM-3r-AMR" id="fM2-at-kuH"/>
+                <outlet property="pourRiceImage" destination="IMh-Sc-sNG" id="4Px-qp-loh"/>
+                <outlet property="timerLabel" destination="obk-Sf-7Nw" id="Wds-VF-meJ"/>
+                <outlet property="view" destination="pUJ-eD-uQP" id="CqM-4z-GTG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="TimerViewController" id="pUJ-eD-uQP">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fM-3r-AMR">
+                    <rect key="frame" x="185.66666666666666" y="566" width="20" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="play.circle.fill" catalog="system"/>
+                    <connections>
+                        <action selector="playStopButtonPressed:" destination="-1" eventType="touchUpInside" id="2Px-gk-I4N"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gow-qW-S26">
+                    <rect key="frame" x="67" y="73" width="257" height="57.333333333333343"/>
+                    <string key="text">Boil the water with rice
+Keep the lid off</string>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-Sc-sNG">
+                    <rect key="frame" x="64" y="187.33333333333337" width="238" height="262"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="262" id="bhO-DS-lZi"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obk-Sf-7Nw">
+                    <rect key="frame" x="67" y="499.33333333333326" width="257" height="29"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3j-qi-sL1">
+                    <rect key="frame" x="40" y="727" width="310" height="42"/>
+                    <color key="backgroundColor" red="1" green="0.86274509799999999" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="Wki-lg-nCq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="mbr-j8-BWC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="wiK-P2-4sh"/>
+            <color key="backgroundColor" red="0.43921568630000002" green="0.86666666670000003" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="IMh-Sc-sNG" firstAttribute="top" secondItem="gow-qW-S26" secondAttribute="bottom" constant="57" id="3FJ-3x-IhB"/>
+                <constraint firstItem="obk-Sf-7Nw" firstAttribute="leading" secondItem="gow-qW-S26" secondAttribute="leading" id="4Db-5K-AXl"/>
+                <constraint firstItem="gow-qW-S26" firstAttribute="leading" secondItem="wiK-P2-4sh" secondAttribute="leading" constant="67" id="7pl-Kd-jxh"/>
+                <constraint firstItem="obk-Sf-7Nw" firstAttribute="trailing" secondItem="gow-qW-S26" secondAttribute="trailing" id="AmQ-0O-aAw"/>
+                <constraint firstItem="gow-qW-S26" firstAttribute="top" secondItem="wiK-P2-4sh" secondAttribute="top" constant="29" id="IgL-nj-TJM"/>
+                <constraint firstItem="wiK-P2-4sh" firstAttribute="trailing" secondItem="t3j-qi-sL1" secondAttribute="trailing" constant="40" id="Isn-bf-YJg"/>
+                <constraint firstItem="0fM-3r-AMR" firstAttribute="centerX" secondItem="obk-Sf-7Nw" secondAttribute="centerX" id="LL4-h1-LYT"/>
+                <constraint firstItem="0fM-3r-AMR" firstAttribute="top" secondItem="obk-Sf-7Nw" secondAttribute="bottom" constant="37.5" id="MZZ-6T-UgU"/>
+                <constraint firstItem="wiK-P2-4sh" firstAttribute="bottom" secondItem="t3j-qi-sL1" secondAttribute="bottom" constant="41" id="XSj-yF-zhF"/>
+                <constraint firstItem="IMh-Sc-sNG" firstAttribute="leading" secondItem="wiK-P2-4sh" secondAttribute="leading" constant="64" id="cpH-03-8yX"/>
+                <constraint firstItem="obk-Sf-7Nw" firstAttribute="top" secondItem="IMh-Sc-sNG" secondAttribute="bottom" constant="50" id="fNt-pf-Nfc"/>
+                <constraint firstItem="wiK-P2-4sh" firstAttribute="trailing" secondItem="IMh-Sc-sNG" secondAttribute="trailing" constant="88" id="gfj-pv-DrE"/>
+                <constraint firstItem="t3j-qi-sL1" firstAttribute="leading" secondItem="wiK-P2-4sh" secondAttribute="leading" constant="40" id="lxf-r2-7Oh"/>
+                <constraint firstItem="wiK-P2-4sh" firstAttribute="trailing" secondItem="gow-qW-S26" secondAttribute="trailing" constant="66" id="nHr-Rg-wBN"/>
+            </constraints>
+            <point key="canvasLocation" x="86.956521739130437" y="1.3392857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
